@@ -1,12 +1,15 @@
 from typing import Any, Dict, List, Optional, Tuple
 
 import hydra
+import os
 import lightning as L
 import rootutils
 import torch
 from lightning import Callback, LightningDataModule, LightningModule, Trainer
 from lightning.pytorch.loggers import Logger
 from omegaconf import DictConfig
+
+os.environ["HYDRA_FULL_ERROR"] = "1"
 
 rootutils.setup_root(__file__, indicator=".project-root", pythonpath=True)
 # ------------------------------------------------------------------------------------ #
